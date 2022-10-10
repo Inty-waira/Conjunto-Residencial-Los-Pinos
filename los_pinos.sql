@@ -23,8 +23,8 @@ CREATE TABLE `casa` (
 -- Estructura de tabla para la tabla `empleado`
 --
 
-CREATE TABLE `empleado` (
-  `id_empleado` int(11) NOT NULL,
+CREATE TABLE `administrador` (
+  `id_administrador` int(11) NOT NULL,
   `nombres` text NOT NULL,
   `apellidos` text NOT NULL,
   `fecha_nacimiento` datetime NOT NULL,
@@ -116,8 +116,8 @@ ALTER TABLE `casa`
 --
 -- Indices de la tabla `empleado`
 --
-ALTER TABLE `empleado`
-  ADD PRIMARY KEY (`id_empleado`);
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`id_administrador`);
 
 --
 -- Indices de la tabla `factura`
@@ -164,10 +164,10 @@ ALTER TABLE `casa`
   ADD CONSTRAINT `casa_ibfk_1` FOREIGN KEY (`id_residente`) REFERENCES `residente` (`id_residente`);
 
 --
--- Filtros para la tabla `empleado`
+-- Filtros para la tabla `administrador`
 --
-ALTER TABLE `empleado`
-  ADD CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `usuario` (`id_usuario`);
+ALTER TABLE `administrador`
+  ADD CONSTRAINT `administrador_ibfk_1` FOREIGN KEY (`id_administrador`) REFERENCES `usuario` (`id_usuario`);
 
 --
 -- Filtros para la tabla `factura`
